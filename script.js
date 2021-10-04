@@ -5,7 +5,9 @@ const superheroes = [
     {name: "Spiderman", alter_ego: "Peter Parker"}]
    
 const findSpiderMan = function(superheroes) {
-    return superheroes.find(heroObject => heroObject.name == 'Spiderman')
+    return superheroes.find(heroObject => heroObject.name === 'Spiderman')
+    // return superheroes.find((heroObject) => {return heroObject.name === 'Spiderman'})
+    // return superheroes.find(function(superhero) {return superhero.name === 'Spiderman'})
 }
 console.log(findSpiderMan(superheroes)) 
 // Find Spiderman
@@ -13,7 +15,7 @@ console.log(findSpiderMan(superheroes))
 
 // Oefening B
 const doubleArrayValues = function(array) {
-    return array.map(number => number *=2)
+    return array.map(number => number * 2)
 }
 console.log(doubleArrayValues([1, 2, 3]))
 // result should be [2, 4, 6]
